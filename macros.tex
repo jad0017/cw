@@ -1,0 +1,108 @@
+% Macros
+
+% Centered horizontal line
+\newcommand{\choar}{%
+\begin{center}
+\line(1,0){350}
+\end{center}
+}
+
+% Left aligned/default aligned horizontal line
+\newcommand{\lhoar}{%
+\line(1,0){200}
+}
+
+% Really so I can switch between single and
+% double space easily to save paper for printing.
+% \revertspace tells it to go back to whatever it's overwritten to.
+% Default is single spaced.
+% \doublenewpage is to add a newpage for doublespace mode.
+% \singlenewpage adds a newpage for singlespace mode.
+\newcommand{\revertspace}{\singlespace}
+
+\newcommand{\doublenewpage}{}
+\newcommand{\singlenewpage}{\newpage}
+
+\newcommand{\setdoublespace}{%
+  \doublespace
+  \renewcommand{\doublenewpage}{\newpage}
+  \renewcommand{\singlenewpage}{}
+  \renewcommand{\revertspace}{\doublespace}
+}
+
+\newcommand{\setsinglespace}{%
+  \singlespace
+  \renewcommand{\doublenewpage}{}
+  \renewcommand{\singlenewpage}{\newpage}
+  \renewcommand{\revertspace}{\singlespace}
+}
+
+
+
+% Spacing macros
+
+% Levels of vertical space
+\newcommand{\vv}{\vspace*{1ex}}
+\newcommand{\VV}{\vspace*{2ex}}
+\newcommand{\vvvv}{\vspace*{8ex}}
+
+% Levels of horizontal space
+\newcommand{\hh}{\hspace*{2ex}}
+\newcommand{\HH}{\hspace*{4ex}}
+\newcommand{\hhhh}{\hspace*{8ex}}
+
+
+% Combined macros
+
+% Left Horizontal line + line break.
+\newcommand{\lhoarb}{\\\lhoar\VV\\}
+
+% Header + Left horizontal line.
+\newcommand{\dayheader}[1]{%
+  \singlespace\noindent\large\textbf{#1}\normalsize\\
+  \lhoar\revertspace
+  \VV
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Character names
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Names are hard, macros for easy changing.
+
+% Main Story Characters
+\newcommand{\emma}{Emma}
+\newcommand{\eric}{Eric}
+\newcommand{\april}{Avril}
+\newcommand{\josh}{Quaid}
+\newcommand{\dameon}{Dameon}
+\newcommand{\jasmine}{Jasmine}
+\newcommand{\mike}{Mike}
+
+% Secondary Story Characters
+\newcommand{\ugly}{Ugly}
+\newcommand{\uglyF}{\ugly{} the Unicorn}
+\newcommand{\yolo}{Yolo}
+\newcommand{\yoloF}{\yolo{} the Yodling Billygoat}
+\newcommand{\pixel}{Pixel}
+\newcommand{\pixelF}{\pixel{} the Cat}
+
+% Secondary Story Animals
+\newcommand{\peacock}{Prassilla}
+\newcommand{\peacockF}{\peacock{} the Peacock}
+\newcommand{\goose}{Garilda}
+\newcommand{\gooseF}{\goose{} the Goose}
+\newcommand{\dove}{Regulus}
+\newcommand{\doveF}{\dove{} the Dove}
+\newcommand{\pidgen}{Alphard}
+\newcommand{\pidgenF}{\pidgen{} the Pidgen}
+
+% The following should probably be in the mains instead.
+
+% Settings
+\interfootnotelinepenalty=10000
+\raggedbottom
+\addtolength{\topskip}{0pt plus 10pt}
+
+\setdoublespace
+%\setsinglespace

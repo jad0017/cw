@@ -3,64 +3,7 @@
 \usepackage{setspace}
 \begin{document}
 
-% Macros
-\newcommand{\choar}{%
-\begin{center}
-\line(1,0){350}
-\end{center}
-}
-\newcommand{\lhoar}{%
-\line(1,0){200}
-}
-
-\newcommand{\revertspace}{\singlespace}
-\newcommand{\doublenewpage}{}
-\newcommand{\setdoublespace}{%
-  \doublespace
-  \renewcommand{\doublenewpage}{\newpage}
-  \renewcommand{\revertspace}{\doublespace}
-}
-\newcommand{\setsinglespace}{%
-  \singlespace
-  \renewcommand{\doublenewpage}{}
-  \renewcommand{\revertspace}{\singlespace}
-}
-
-
-
-\newcommand{\vv}{\vspace*{1ex}}
-\newcommand{\VV}{\vspace*{2ex}}
-\newcommand{\vvvv}{\vspace*{8ex}}
-
-\newcommand{\hh}{\hspace*{2ex}}
-\newcommand{\HH}{\hspace*{4ex}}
-\newcommand{\hhhh}{\hspace*{8ex}}
-
-% Secondary Story Characters
-\newcommand{\ugly}{Ugly}
-\newcommand{\uglyF}{\ugly{} the Unicorn}
-\newcommand{\yolo}{Yolo}
-\newcommand{\yoloF}{\yolo{} the Yodling Billygoat}
-\newcommand{\pixel}{Pixel}
-\newcommand{\pixelF}{\pixel{} the Cat}
-
-% Secondary Story Animals
-\newcommand{\peacock}{Prassilla}
-\newcommand{\peacockF}{\peacock{} the Peacock}
-\newcommand{\goose}{Garilda}
-\newcommand{\gooseF}{\goose{} the Goose}
-\newcommand{\dove}{Regulus}
-\newcommand{\doveF}{\dove{} the Dove}
-\newcommand{\pidgen}{Alphard}
-\newcommand{\pidgenF}{\pidgen{} the Pidgen}
-
-% Settings
-\interfootnotelinepenalty=10000
-\raggedbottom
-\addtolength{\topskip}{0pt plus 10pt}
-
-\setdoublespace
-%\setsinglespace
+\input{macros}
 
 % Text
 %\input{day1}
