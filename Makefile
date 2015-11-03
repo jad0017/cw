@@ -1,25 +1,18 @@
 .SECONDARYEXPANSION:
 
-main_files := \
-	main.tex \
-	day1.tex \
-	day2.tex
-
-ugly_files := \
-	ugly_story.tex \
-	ugly.tex \
-
-all: main ugly
+all: main ugly dreams
 
 .PHONY: main
 main: texfile = main.tex
-main: depend = $(main_files)
 main: pdf/main.pdf
 
 .PHONY: ugly
 ugly: texfile = ugly.tex
-ugly: depend = $(ugly_files)
 ugly: pdf/ugly.pdf
+
+.PHONY: dreams
+dreams: texfile = dreams.tex
+dreams: pdf/dreams.pdf
 
 .PHONY: force
 force:
