@@ -11,7 +11,7 @@
 
 % Left aligned/default aligned horizontal line
 \newcommand{\lhoar}{%
-\line(1,0){200}
+\noindent\line(1,0){200}
 }
 
 % Really so I can switch between single and
@@ -62,6 +62,7 @@
 
 % Left Horizontal line + line break.
 \newcommand{\lhoarb}{\\\lhoar\VV\\}
+\newcommand{\lhoarnob}{\lhoar\VV\\}
 
 % Header + Left horizontal line.
 \newcommand{\dayheader}[1]{%
