@@ -1,6 +1,10 @@
 .SECONDARYEXPANSION:
 
-all: main ugly dreams
+all: main main2 ugly dreams
+
+.PHONY: main2
+main2: texfile = main2.tex
+main2: pdf/main2.pdf
 
 .PHONY: main
 main: texfile = main.tex
