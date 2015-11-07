@@ -1,3 +1,5 @@
+check/out
+check/out/*
 pdf/*
 ## Core latex/pdflatex auxiliary files:
 *.aux
